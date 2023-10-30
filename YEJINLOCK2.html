@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password</title>
+    <link rel="stylesheet" href="YEJINLOCK2.css">
+
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="hi">      
+        <h3>@YEJIN1000</h3>
+      </div>
+      <div class="description">
+        <p> Welcome and Thank you for visiting.</p>
+        <P>Please enter the password to explore further story about YEJIN CHUN</p>      </div>
+      <div class="pw">
+        <form class="passform" onsubmit="return passcheck()" action="YEJIN-cv.html">
+          <input class="password" type="password" placeholder="Enter Password" required id="pass1">
+          <input class="submit" type="submit">
+        </form>
+      </div>
+      <div class="info">
+        <a href="https://www.google.com/"><p>Forget Password?</p></a>
+      </div>
+        <script>
+          var password = "YEJIN1000";
+          function passcheck() {
+             if(document.getElementById('pass1').value == password){
+                alert('correct Password, Click Ok to enter Website');
+                return ture;
+          }  if(document.getElementById('pass1').value != password)
+            {alert('wrong Password, Try Again'); 
+              return false; }
+              }
+        </script>
+    </div>
+  </body>
+</html>
