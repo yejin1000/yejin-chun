@@ -15,10 +15,11 @@ body{
 }
 .container{
   position: grid;
-  width:500px;
+  width:450px;
   height:500px;
   background-color: antiquewhite;
   border-radius: 30px;
+  padding:3%;
 }
 .hi{
   width: 100%;
