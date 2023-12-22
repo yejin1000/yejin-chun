@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width,intitial-scale=1.0">
+    <link rel="stylesheet" href="poland.css">
+    <title>YEJIN CHUN | Project</title>
+  </head>
+  <body>
+    <div class="sectionforf">
+      <div class="welcome"><h2>⌵Scroll Down⌵</h2></div>
+      <h2 class="title">Korea</h2>
+      <section class="poland">
+        <h2 class="inner-title">Poland</h2>
+      </section>
+      <section class="menu">
+        <div class="color">
+          <ul>
+            <li><a href="poland-volunteer-portfolio.html" data-text="portfolio"><img src="pic/IMG_2456.JPG">폴란드 글로벌봉사단 포트폴리오</a></li>
+            <li><a href="https://yejin1000.github.io/yejin-chun/YEJINCVP.html" data-text="cv"><img src="pic/IMG_2486.jpg">RESUME</a></li>
+            <li><a href="poland-contact.html" data-text="Contact"><img src="pic/IMG_2487.jpg">연락처</a></li>
+            <div class="cursor"></div>
+          </ul>
+        </div>
+
+          <script>
+            const polandSection = document.querySelector('.poland');
+            const menuSection = document.querySelector('.menu');
+            let isPolandEffectComplete = false;
+          
+            function applyPolandEffect() {
+              let value = window.scrollY;
+              polandSection.style.clipPath = "circle(" + value * 2 + "px at left center)";
+            }
+          
+            function applyMenuEffect() {
+              let value = window.scrollY;
+              menuSection.style.clipPath = "circle(" + value * 3 + "px at right center)";
+            }
+          
+            function smoothScroll() {
+              if (!isPolandEffectComplete) {
+                applyPolandEffect();
+              } else {
+                applyMenuEffect();
+              }
+              requestAnimationFrame(smoothScroll);
+            }
+          
+            window.addEventListener('scroll', function () {
+              if (window.scrollY >= 2000) {
+                isPolandEffectComplete = true;
+              }
+            });
+          
+            // 초기에 애니메이션 시작
+            smoothScroll();
+          </script>
+
+          <script>
+            let pos = document.documentElement;
+            pos.addEventListener("mousemove", e => {
+              pos.style.setProperty('--x', e.clientX + "px");
+              pos.style.setProperty('--y', e.clientY + "px");
+            })
+          </script>
+
+
+
+    </div>
+  </body>
+</html>
