@@ -69,6 +69,7 @@ section{
   z-index: 1;
   font-size:25vw;
   background-image: url(pic/pppp.jpeg);
+  color: #000;
   background-attachment: center;
   background-position: center;
   -webkit-background-clip: text;
